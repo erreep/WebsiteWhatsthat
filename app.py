@@ -12,9 +12,8 @@ app = Flask(__name__)
 CORS(app)
 
 # Load the model without optimizer state
-model = load_model('/Users/sebas/Desktop/Projects/whatsthat/Website/my_model_no_optimizer.h5')
-
-symbols_df = pd.read_csv('/Users/sebas/Desktop/Projects/whatsthat/Website/symbols.csv')
+model = load_model('my_model_no_optimizer.h5')
+symbols_df = pd.read_csv('symbols.csv')
 
 @app.route('/predict', methods=['POST'])
 def predict():
