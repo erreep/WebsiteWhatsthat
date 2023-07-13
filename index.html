@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <title>Paint Window</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+            width: 400px;  /* Adjust the width as needed */
+            height: 400px; /* Adjust the height as needed */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="32" height="32"></canvas>
+    <br>
+    <button onclick="predict()">Predict</button>
+    <div>
+        <div id="prediction"></div>
+        <button onclick="copyLaTeX()">Copy</button>
+    </div>
+
+    <script src="/Users/sebas/Desktop/Projects/whatsthat/Website/script.js"></script>
+</body>
+</html>
