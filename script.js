@@ -69,7 +69,7 @@ function predict() {
 
     // Send the base64-encoded image data to your server for prediction using AJAX or fetch
     // Replace the URL with your server endpoint for prediction
-    fetch('https://<your-app-service-name>.azurewebsites.net/predict', {
+    fetch('whatsthatsign.azurewebsites.net/predict', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
