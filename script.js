@@ -56,7 +56,7 @@ function preprocessImage(canvas) {
     const imageData = canvas.toDataURL('image/png');
 
     // Remove the data URL prefix
-    const base64Image = imageData.replace(/^data:image\/(png|jpeg|jpg);base64,/, '');
+    const base64Image = imageData.replace(/^data:image\\/(png|jpeg|jpg);base64,/, '');
 
     return base64Image;
 }
@@ -69,7 +69,7 @@ function predict() {
 
     // Send the base64-encoded image data to your server for prediction using AJAX or fetch
     // Replace the URL with your server endpoint for prediction
-    fetch('http://127.0.0.1:5001/predict', {
+    fetch('https://<your-app-service-name>.azurewebsites.net/predict', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -93,7 +93,7 @@ function renderLaTeX(expression) {
     const output = document.getElementById('prediction');
 
     // Remove the extra dollar signs if present
-    expression = expression.replace(/^\$\$|\$\$$/g, '');
+    expression = expression.replace(/^\\$\\$|\\$\\$$/g, '');
 
     // Wrap the LaTeX expression with $$ if it's not already wrapped
     if (!expression.startsWith('$$') && !expression.endsWith('$$')) {
